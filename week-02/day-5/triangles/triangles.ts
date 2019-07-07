@@ -11,7 +11,7 @@ function triangleMaker10000 (startX: number, length: number){
     ctx.beginPath();
     ctx.moveTo(startX, startX + length);
     ctx.lineTo(startX + length, startX + length);
-    ctx.lineTo(startX + (length)/2, (600-(0.866*length)) - (600-(startX + length))); //433
+    ctx.lineTo(startX + (length)/2, (600-(0.866*length)) - (600-(startX + length))); 
     ctx.lineTo(startX, startX + length);
     ctx.stroke();
 }
@@ -19,12 +19,9 @@ function triangleMaker10000 (startX: number, length: number){
 
 triangleMaker10000(10, 30);
 
-//ctx.beginPath();
-//ctx.moveTo(50, 550);
-//ctx.lineTo(550, 550);
-//ctx.lineTo(300, 116);
-//ctx.lineTo(50, 550);
-//ctx.stroke();
+
+
+
 
 
 
