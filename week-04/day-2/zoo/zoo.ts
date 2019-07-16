@@ -1,5 +1,7 @@
 'use strict';
 
+import {Flyable} from './../flyable';
+
 abstract class Animals {
     name: string;
     age: number;
@@ -53,7 +55,7 @@ class Reptile extends Animals {
     }
 }
 
-class Bird extends Animals {
+class Bird extends Animals implements Flyable {
     canFly : boolean;
     speed: string;
 
@@ -63,6 +65,10 @@ class Bird extends Animals {
     breed(): string {
         return "laying eggs"
     };
+
+    land(){}
+    fly(){};
+    takeOff(){};
 
     constructor(name: string, age: number, size: string, numberOfLegs: number, canFly: boolean, speed: string){
         super(name, age, size, numberOfLegs);
