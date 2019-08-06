@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: Attributes</title>
+  </head>
+  <body>
+
+    <img src="https://static.wixstatic.com/media/f4461b_83457ca5dd844c71a760d36e6583d0ff.png/v1/fill/w_168,h_168,al_c,usm_0.66_1.00_0.01/f4461b_83457ca5dd844c71a760d36e6583d0ff.png">
+    <a href="http://www.themostamazingwebsiteontheinternet.com/">The Best Website Ever</a>
+    <button>Click me!</button>
+    <button class="this-one">Click me!</button>
+
+    <script>
+        'use strict';
+        let originalPic = document.querySelector('img');
+        console.log(originalPic.getAttribute('src'));
+        //originalPic.setAttribute('src', 'https://media.mnn.com/assets/images/2018/04/LItSL_4.jpg.x0_q80_crop-smart.jpg' );
+
+        let origiLink = document.querySelector('a');
+        origiLink.setAttribute('href', 'https://www.greenfoxacademy.com');
+
+        let buttonUpdate = document.getElementsByClassName("this-one");
+        console.log(buttonUpdate);
+        buttonUpdate[0].textContent ="don't click me!";
+        buttonUpdate[0].disabled = true;
+    </script>
+
+  </body>
+</html>
