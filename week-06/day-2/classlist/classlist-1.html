@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: ClassList</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .balloon {
+        background-color: lime;
+        border-radius: 100%;
+      }
+      .pear {
+        background: lime;
+        padding: 2rem;
+        text-decoration: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="apple">apple</p>
+    <p class="balloon">balloon</p>
+    <p class="cat red-dot">cat</p>
+    <p>dolphin</p>
+
+
+    <script>
+        'use strict';
+        let paragList = document.querySelectorAll('p')
+        console.log(paragList);
+        console.log(paragList[1].classList.value);
+        if (paragList[3].classList.value === 'dolphin') {
+            paragList[0].textContent = 'pear';  
+        }
+
+        if (paragList[0].classList.contains('apple')) {
+            paragList[2].textContent = 'dog';  
+        }
+        paragList[0].setAttribute('class', 'red');
+
+    </script>
+
+    <!-- 
+      
+      Make balloon less balloon-like (change its shape) - wat??
+     -->
+  </body>
+</html>
