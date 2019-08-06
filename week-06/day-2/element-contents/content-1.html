@@ -1,0 +1,27 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+  </head>
+  <body>
+    <p class="apple">apple</p>
+    <p class="balloon">banana</p>
+    <p class="cat">car</p>
+    <p class="animals">goat rabbit <strong>cat</strong> dog</p>
+
+
+    <script>
+        let contentFillWidth = document.querySelector('.animals');
+        console.log(contentFillWidth.innerHTML);
+        let paragraphs = document.querySelectorAll('p');
+        console.log(paragraphs);
+        for (let i = 0; i < paragraphs.length; i ++) {
+            paragraphs[i].innerHTML = contentFillWidth.innerHTML;
+        }
+    </script>
+
+  </body>
+</html>
+
