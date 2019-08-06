@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+    <style> .uls {
+        background-color: limegreen;
+    }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+    </ul>
+
+    <script>
+        let listOfThingsToAdd = ['apple', 'banana', 'cat', 'dog'];
+        let listOfPlaceholders = document.querySelectorAll('li');
+        for (i = 0; i < listOfPlaceholders.length; i++) {
+            listOfPlaceholders[i].textContent = listOfThingsToAdd[i];
+        }
+       document.querySelector('ul').setAttribute('class', 'uls');  
+    </script>
+</body>
+</html>
+
+
