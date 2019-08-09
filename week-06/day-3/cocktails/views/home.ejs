@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cocktails</title>
+      <link rel="stylesheet" href="main.css" type="text/css">
+  </head>
+  <body>
+  
+    <h1>Cocktails</h1>
+
+    <ul class = 'menu'>
+      <li><a href="http://localhost:3000/" > All </a></li>
+       <% for (let i = 0; i < alcoholList.length; i++) { %>
+                    <li><a href= <%= "http://localhost:3000/?alcohol=" + alcoholList[i] %> > <%= alcoholList[i] %></a></li>     
+            <% } %>  
+    </ul>
+
+  <div class = "container">
+   <table>
+    <tr>
+      <td class = "tableTitle">Name</td>
+      <td class = "tableTitle">Price</td>
+    </tr>  
+    
+    <% if (alcoholType !== undefined) { %>
+        <% for (let j = 0; j < filteredDrinks.length; j++) { %>
+          <tr>
+            <td><strong><%= filteredDrinks[j].name %></strong> <% if (!filteredDrinks[j].isAlcoholic) { %>
+            non-alcoholic
+            <% } %>
+            <br> <%= filteredDrinks[j].contains %></td>
+            <td><strong><%= filteredDrinks[j].price %> Ft</strong></td>  
+          </tr> 
+        <% } %> 
+    <% }  else { %>
+        <% for (let i = 0; i < cocktails.length; i++) { %>
+          <tr>
+            <td><strong><%= cocktails[i].name %></strong> <% if (!cocktails[i].isAlcoholic) { %>
+            non-alcoholic
+            <% } %>
+            <br> <%= cocktails[i].contains %></td>
+            <td><strong><%= cocktails[i].price %> Ft</strong></td>  
+          </tr>
+        <% } %>   
+    <% } %>
+   </table> 
+  </div>
+
+  </body>
+</html>

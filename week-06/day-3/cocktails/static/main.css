@@ -1,0 +1,33 @@
+ body {
+     background-color:  gainsboro;
+     font-family: Arial, Helvetica, sans-serif;
+     padding-left: 25;
+ }
+
+.menu li {
+    display: inline;
+  }
+
+.container {
+    display : flex;
+    width: 40%;
+  }  
+
+table {
+    width: 100%;
+}  
+
+.tableTitle {
+    background-color: black;
+    color: white
+}  
+
+td {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+tr:nth-child(even) {
+    background: gray;
+  }
