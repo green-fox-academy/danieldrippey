@@ -36,7 +36,7 @@
 
       <script>
             let section = document.getElementsByTagName('section');
-                for (let i = 0; i < 100; i++) {
+                for (let i = 1; i <= 100; i++) {
                 let div = document.createElement('div');
                 div.textContent = i;
                 section[0].appendChild(div);
@@ -44,16 +44,16 @@
 
        function primeOrNot() {
            let div = document.querySelectorAll('div');
-           for (let i = 2; i < div.length; i++) {
+           for (let i = 0; i <= div.length; i++) {   
             let counter = 0;   
-                for (let j = 2; j < i; j++) {
-                   if (i % j === 0) {
+                for (let j = 1; j <= i+1; j++) {
+                   if ((i+1) % j === 0) {
                        counter += 1;
                    } 
                 }   
                 (function (i) {
                     setTimeout(function () {        
-            if (counter > 0) {
+            if (counter !== 2) {
                 div[i].setAttribute('class', 'not-prime');    
                 }  else 
                     {div[i].setAttribute('class', 'prime'); 
@@ -65,9 +65,6 @@
 
 primeOrNot();
 
-setInterval(() => {
-    primeOrNot();; 
-  }, 3000); 
 
         //   1: generate 100 divs to the <section> element and add index numbers to it as the element's textContent
         //   2: Create a function that adds a 'not-prime' class to a div if it's not a prime and 'prime' if it is
