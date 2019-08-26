@@ -1,0 +1,100 @@
+header {
+    background-color: purple;
+    height: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;   
+}
+
+.box {
+    height: 75px;
+    width: 75px;
+    background-color: mediumaquamarine; 
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 35px;
+    
+}
+.type1 {
+    width: 225px;
+}
+
+.type2 {
+    width: 150px;
+}
+
+.type3 {
+    margin-left: 625px;
+}
+
+.container {
+    display: flex;
+    background-color: grey;
+    height: 800px;
+    justify-content: flex-end;
+}
+
+.yellow-field {
+    background-color: yellow;
+    height: 100%;
+    width: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.green-field {
+    height: 100%;
+    width: 33%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.purple{
+    width: 90%;
+    height: 10%;
+    margin-left: 10px;
+    background-color: darkviolet;
+    margin-top: 10px;
+}
+
+p.purple {
+    background-color: green;
+}
+
+p.single {
+    background-color: yellow;
+    width: 90%;
+    margin: 10px;
+    height: 25%;    
+}
+
+.redbox {
+    background-color: yellow;
+    width: 90%;
+    margin: 10px;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.redsquare {
+    background-color: red;
+    width: 20%;
+    height: 150px;
+    margin: 10px;
+}
+
+.twinbox {
+    background-color: yellow;
+    width: 90%;
+    margin: 10px;
+    height: 25%
+}
