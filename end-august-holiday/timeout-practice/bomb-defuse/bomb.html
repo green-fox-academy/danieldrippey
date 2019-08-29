@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bomb defuse</title>
+</head>
+<body>
+    <div class="display">10</div>
+    <button>Defuse</button>
+</body>
+    <script>
+
+      let counter = 10;
+      function countingBack () {
+        let displayNumber = document.querySelector('.display')
+        displayNumber.textContent = counter;
+        counter -= 1;
+        if (counter === -1) {
+          displayNumber.textContent = "Bomb exploded";  
+          clearInterval(timer);
+        }
+      }
+
+    function defuser () {
+      if (counter > -1) { 
+        clearInterval(timer);
+        let defuseText = document.querySelector('.display');
+        defuseText.textContent = "Bomb defused";
+      }  
+    }
+
+    let defuse = document.querySelector("button");
+      defuse.onclick = function () {
+      defuser();
+    }
+
+    countingBack();
+    timer = setInterval(countingBack, 1000);
+    </script>
+</html>
