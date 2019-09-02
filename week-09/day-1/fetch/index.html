@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>fetch practice</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <button>Gimme a joke</button>
+    <div class = "container"></div>
+  <script type="text/javascript">
+  
+    let jokeText = document.querySelector("div");
+
+    function getTheJoke () {
+    const URL = 'http://api.icndb.com/jokes/random';
+    fetch(URL)
+    .then(response => response.json())
+      .then(function(data) {
+        let jokeBody = data.value.joke;
+        jokeText.innerHTML = jokeBody;        
+  }).catch(error => console.log('error: ', error));
+  
+}
+
+    let button = document.querySelector('button');
+    button.addEventListener("click", function() {
+        getTheJoke()
+    });
+
+  </script>
+</body>
+</html>
