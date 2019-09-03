@@ -1,0 +1,40 @@
+header {
+    background-color: purple;
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 10% 15% 10% 15%;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+nav {
+    background-color: aqua;
+    margin: 10px;
+    height: 60px;
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 8fr 1fr;
+    grid-gap: 15px;
+    padding: 15px
+}
+
+.Sidebar {
+    background-color: green;
+}
+
+.Main {
+    background-color: yellow;
+}
+
+footer {
+    background-color: grey;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
