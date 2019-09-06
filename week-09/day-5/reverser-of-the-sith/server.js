@@ -50,13 +50,16 @@ function addExtraSentences(array) {
 }
 
 app.post('/sith', (req, res) => {
-  req.body = {
-      "text": "This is my example sentence. Just for fun. "
-    }
+  if (req.body.text === undefined) {
+    res.send ({
+      "error": "Feed me some text you have to, padawan young you are. Hmmm."
+    })   
+  } else {
     let textToChange = yodaSpeaker(req.body.text);
     res.send({
       sith_text: textToChange
     });
+  }
 });
 
 app.listen(port, () => {
