@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#display {
+    width: 60%;
+    height: 500px;
+    background-color: gainsboro;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+#logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    padding-left: 25px;
+}
+
+#current {
+    background-color: plum;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+#artwork {
+    background-color: darkslategray;
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+}
+
+#playlists {
+    background-color: yellow;
+    grid-column: 1 / 3;
+    grid-row: 4 / 9;
+}
+
+#artwork {
+    background-color: darkslategray;
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+}
+
+#tracks {
+ background-color: red;
+ grid-column: 3 / 4;
+    grid-row: 3 / 10;   
+}
+
+#control-panel {
+    grid-row-start: 10;
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: darkturquoise;
+}
+
+audio {
+    background-color: blue;
+    width: 100%;
+}
