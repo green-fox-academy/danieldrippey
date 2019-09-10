@@ -5,8 +5,8 @@ body {
 }
 
 #display {
-    width: 60%;
-    height: 500px;
+    width: 70%;
+    height: 550px;
     background-color: gainsboro;
     display: grid;
     grid-template-rows: repeat(10, 1fr);
@@ -17,48 +17,79 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: flex;
+    flex-direction: row;
     padding-left: 25px;
+    align-items: stretch;
+    border: 2px solid black;
+}
+
+#logo > img {
+    width: 50%;
+    padding: 3%;
 }
 
 #current {
-    background-color: plum;
+    border: 2px solid black;
     grid-column: 3 / 4;
     grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;  
+    justify-content: center;
+    align-content: center;  
 }
 
+#addToPlaylist #addToFavourites #newPlaylist {
+   width: 20px;
+   height: 20px;
+ }
+
 #artwork {
-    background-color: darkslategray;
+    border: 2px solid black;
     grid-column: 2 / 3;
     grid-row: 1 / 5;
 }
 
 #playlists {
-    background-color: yellow;
+    border: 2px solid black;
     grid-column: 1 / 3;
     grid-row: 4 / 9;
 }
 
 #artwork {
-    background-color: darkslategray;
+    border: 2px solid black;
     grid-column: 2 / 3;
     grid-row: 1 / 5;
 }
 
 #tracks {
- background-color: red;
- grid-column: 3 / 4;
+    border: 2px solid black;
+    grid-column: 3 / 4;
     grid-row: 3 / 10;   
 }
 
 #control-panel {
     grid-row-start: 10;
     grid-column: 1 / 5;
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: darkturquoise;
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 audio {
-    background-color: blue;
+    background-color:black;
     width: 100%;
+}
+
+.audio-buttons {
+    padding: 25px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    color: red;
+}
+
+audio::-webkit-media-controls-panel {
+    background: transparent;
 }

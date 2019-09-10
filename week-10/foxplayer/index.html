@@ -13,13 +13,23 @@
                 <img src="/logo/foxplayer.png" alt="Green Fox logo ">
                 <div id="notifications">notifications</div>
         </div>
-        <div id="current">current playing</div>
+        <div id="current">
+            <h5>currently playing:</h5>
+            <img id="addToPlaylist" src="/icons/plus.png" alt="small plus icon">
+            <img id="addToFavourites" src="/icons/star.svg" alt="small star icon">
+        </div>
         <div id="playlists">
-            <h1>Playlists</h1>
+            <h2>Playlists</h2>
+            <img id="newPlaylist" src="/icons/plus.png" alt="small plus icon">
         </div>
         <div id="artwork">artwork</div>
         <div id="tracks">tracklist</div>
         <div id="control-panel">
+            <div id="control-buttons">
+                <img class="audio-buttons" src="/icons/rewind.svg" alt="small rewind icon">
+                <img class="audio-buttons" src="/icons/pause.svg" alt="small pause icon">
+                <img class="audio-buttons" src="/icons/forward.svg" alt="small forward icon">
+            </div>    
             <figure>
                 <figcaption>Listen something</figcaption>
                 <audio
@@ -28,9 +38,14 @@
                         Your browser does not support the
                         <code>audio</code> element.
                 </audio>
-            </figure></div>
+            </figure>
     </div>
-    <script>   
+    <script src="./index.js">
+  /* document.addEventListener('keydown', event => {
+    if (event.keyCode === 32) {
+        alert('hey');
+    }
+   });  */
     </script>
 </body>
 </html>
