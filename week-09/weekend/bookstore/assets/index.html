@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookstore</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <form id="filtering">
+        <fieldset>
+            <legend>Filters:</legend>
+                <label>Category:</label>
+                    <select id = "myList">
+                        <option value = "">All</option>
+                        <option value = "Science">Science</option>
+                        <option value = "Technology">Technology</option>
+                        <option value = "Computers">Computers</option>
+                        <option value = "Medical">Medical</option>
+                        <option value = "Nature">Nature</option>
+                    </select>
+                <label>Price greater than:</label>
+                    <input id = "gtp" placeholder="0">
+                    <button>submit</button>
+        </fieldset>
+    </form>
+    <h1>Books:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title:</th>
+                <th>Author:</th>
+                <th>Category:</th>
+                <th>Publisher:</th> 
+                <th>Price:</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="/functions.js" ></script>
+</body>
+</html>
