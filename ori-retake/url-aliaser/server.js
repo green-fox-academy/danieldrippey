@@ -57,7 +57,7 @@ app.get('/a/:alias', (req, res) => {
       res.status(404).send({ message: 'Page not found'});
       return
     } 
-    connection.query('UPDATE alias SET hitCount = hitCount + 1 WHERE alias = ?', [inputParam], (error, rows) => {
+    connection.query('UPDATE alias SET hitCount = hitcount+1 WHERE alias = ?', [inputParam], (error, rows) => {
       if (error) {
         res.sendStatus(500);
         return; 
