@@ -1,0 +1,22 @@
+body {
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+#button {
+    width: 40%;
+}
+
+span {
+    font-weight: bold;
+}
+
+#denial {
+    color: red
+}

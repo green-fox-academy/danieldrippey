@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Url aliaser</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>URL - Aliaser 4000</h1>
+    <p id="response"></p>
+    <form id="submit-form" action="/api/links" method="POST">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" required><br>
+        <label for="alias">Alias:</label>
+        <input type="text" id="alias" name="alias" required><br>  
+        <input id="button" type="submit" value="submit"> 
+    </form>
+    <script src="functions.js"></script>
+</body>
+</html>
