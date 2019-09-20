@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>error-homepage</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a>Home</a>
+        <a href="tickets.html">Tickets</a>
+    </nav>
+    <h1>Create new tickets</h1>
+    <form id="report" method="POST">
+        <label>Name:</label>
+        <select id="namelist" name="namelist">
+            <option>-- Select Name --</option>
+        </select> 
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" id="manufacturer" name="manufacturer">
+        <label for="serial_number">Serial number:</label>
+        <input type="text" id="serial_number" name="serial_number">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+        <input id="button" type="submit" value="report">
+    </form>
+<script src="index.js"></script>
+</body>
+</html>
